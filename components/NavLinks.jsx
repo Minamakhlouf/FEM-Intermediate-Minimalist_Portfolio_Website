@@ -11,7 +11,7 @@ const publicSans = Public_Sans({
     weight: "400"
 })
 
-export default function() {
+export default function NavLinks() {
     const [mobileLinksShown, setMobileLinksShown] = useState(false); 
     const path = usePathname(); 
     return (

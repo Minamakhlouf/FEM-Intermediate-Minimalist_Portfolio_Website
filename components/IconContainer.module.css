@@ -1,0 +1,15 @@
+.icons {
+    display: flex; 
+    gap: 16px; 
+    align-items: center;
+}
+
+.icons svg {
+    cursor: pointer; 
+}
+
+@media screen and (min-width: 768px) {
+    .footer-icon  {
+        margin-left: auto; 
+    }
+}

@@ -1,0 +1,32 @@
+.grid-container {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-areas: "picture" "text";
+    gap: 32px; 
+}
+
+@media screen and (min-width: 768px) {
+    .even {
+        grid-template-columns: 1.22fr 1fr; 
+        grid-template-areas: "picture text";
+        gap: 69px; 
+    }
+    
+    .odd {
+        grid-template-columns: 1fr 1.22fr; 
+        grid-template-areas: "text picture";
+        gap: 69px; 
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .even, .odd {
+        gap: 125px; 
+    }
+    .even {
+        padding-right: 125px; 
+    }
+    .odd {
+        padding-left: 125px; 
+    }
+}

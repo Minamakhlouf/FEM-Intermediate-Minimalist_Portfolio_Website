@@ -1,0 +1,60 @@
+.form {
+    display: grid; 
+    grid-template-columns: 1fr;
+    gap: 24px; 
+}
+
+.form div:not(:last-of-type) {
+    display: flex; 
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.form label {
+    font-size: 13px; 
+    line-height: 2.3; 
+    font-weight: bold; 
+}
+
+.form input, .form textarea {
+    padding: 8px 16px; 
+    background-color: #Eaeaeb; 
+    color: #33323b; 
+    border: none; 
+    line-height: 2.3; 
+    font-size: 13px; 
+    resize: none; 
+}
+
+.invalid {
+    border: 2px solid #F43030; 
+    outline: 2px solid #F43030; 
+}
+
+.error {
+    color: #F43030; 
+}
+
+.form textarea {
+    height: 96px; 
+}
+
+.form .submit {
+    padding: 17px 24px; 
+    cursor: pointer; 
+    background-color: #203A4C;
+    color: white; 
+    transition: all 0.2s ease-in-out; 
+}
+
+.form .submit:hover {
+    color: #203A4C; 
+    background-color: #Eaeaeb;
+    border: 1px solid #203A4C; 
+}
+
+@media screen and (min-width: 768px) {
+    .form label {
+        font-size: 16px; 
+    }
+}

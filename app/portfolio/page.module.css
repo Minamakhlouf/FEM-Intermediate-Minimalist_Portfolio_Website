@@ -1,0 +1,21 @@
+.project-container {
+    padding: 0 32px; 
+    display: flex;
+    flex-direction: column;
+    gap: 32px; 
+}
+
+@media screen and (min-width: 768px) {
+    .project-container {
+        padding: 0 40px; 
+        gap: 80px; 
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .project-container {
+        padding: 0; 
+        max-width: 1110px; 
+        margin: 0 auto 150px; 
+    }
+}

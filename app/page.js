@@ -1,95 +1,73 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.css"
+import ContactCTA from "@/components/ContactCTA";
+import LinkButton from "@/components/LinkButton";
+import { Public_Sans } from "next/font/google";
+
+const publicSans = Public_Sans({
+  subsets: ["latin"], 
+  weight: "400"
+})
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <main>
+      <section className={styles["hero-section"]}>
+        <div className={styles["content-container"]}>
+          <picture className={styles["image-container"]}>
+            <source
+              srcSet="/homepage/desktop/image-homepage-hero.jpg 1x, /homepage/desktop/image-homepage-hero@2x.jpg 2x"
+              media="(min-width: 1110px)"
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+            <source
+              srcSet="/homepage/tablet/image-homepage-hero.jpg 1x, /homepage/tablet/image-homepage-hero@2x.jpg 2x"
+              media="(max-width: 1110px) and (min-width: 768px)"
+            />
+            <source
+              srcSet="/homepage/mobile/image-homepage-hero.jpg 1x, /homepage/mobile/image-homepage-hero@2x.jpg 2x"
+              media="(max-width: 768px)"
+            />
+            <Image
+              src="/homepage/mobile/image-homepage-hero.jpg"
+              srcSet="/homepage/mobile/image-homepage-hero@2x.jpg 2x"
+              alt="Hero Image"
+              fill
+            />
+          </picture>
+          <div className={styles["hero-text"]}>
+            <h1 className={styles.heading}>Hey, I&apos;m Alex Spencer and I love building beautiful websites.</h1>
+            <a className={styles["about-link"]} href="#about"><span><Image src="/icons/down-arrows.svg" width="16" height="12" alt="down arrow"/></span><span className={publicSans.className}>ABOUT ME</span></a>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </section>
+      <section id={"about"} className={styles.about}>
+        <picture className={styles["image-container"]}>
+          <source
+            srcSet="/homepage/desktop/image-homepage-profile.jpg 1x, /homepage/desktop/image-homepage-profile@2x.jpg 2x"
+            media="(min-width: 1110px)"
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <source
+            srcSet="/homepage/tablet/image-homepage-profile.jpg 1x, /homepage/tablet/image-homepage-profile@2x.jpg 2x"
+            media="(max-width: 1110px) and (min-width: 768px)"
           />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <source
+            srcSet="/homepage/mobile/image-homepage-profile.jpg 1x, /homepage/mobile/image-homepage-profile@2x.jpg 2x"
+            media="(max-width: 768px)"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <Image
+            src="/homepage/mobile/image-homepage-profile.jpg"
+            srcSet="/homepage/mobile/image-homepage-profile@2x.jpg 2x"
+            alt="Profile Image"
+            fill
+          />
+        </picture>
+        <div className={styles["about-text"]}>
+          <h2>About Me</h2>
+          <p className={publicSans.className}>I&apos;m a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required. I&apos;m based in London, UK, but I&apos;m happy working remotely and have experience in remote teams. When I&apos;m not coding, you&apos;ll find me outdoors. I love being out in nature whether that&apos;s going for a walk, run or cycling. I&apos;d love you to check out my work.</p>
+          <LinkButton href="/portfolio" text="Go to Portfolio"/>
+        </div>
+      </section>
+      <ContactCTA/>
+    </main>
   );
 }

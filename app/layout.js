@@ -1,16 +1,20 @@
-import localFont from "next/font/local";
 import "./globals.css";
+import styles from "./layout.module.css"
+import NavLinks from "@/components/NavLinks";
+import Link from "next/link";
+import IconContainer from "@/components/IconContainer";
+import FooterLinks from "@/components/FooterLinks";
+import { Ibarra_Real_Nova, Public_Sans} from "next/font/google"; 
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const ibarra = Ibarra_Real_Nova({
+  subsets: ["latin"],
+  weight: ["400", "700"]
+})
+
+const publicSans = Public_Sans({
+  subsets: ["latin"], 
+  weight: "400"
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -20,8 +24,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={ibarra.className}>
+        <nav className={styles.navigation}>
+          <div className={styles["flex-container"]}>
+            <Link href="/"><svg xmlns="http://www.w3.org/2000/svg" width="61" height="32"><path fill="#33323D" fillRule="evenodd" d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"/></svg></Link>
+            <NavLinks/>
+          </div>
+        </nav>
         {children}
+        <footer className={styles.footer}>
+          <div className={styles["footer-flex"]}>
+            <Link href="/"><svg xmlns="http://www.w3.org/2000/svg" width="61" height="32"><path fill="#FFFFFF" fillRule="evenodd" d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"/></svg></Link>
+            <FooterLinks/>
+            <IconContainer isLight={true} isFooter={true}/>
+          </div>
+        </footer>
       </body>
     </html>
   );

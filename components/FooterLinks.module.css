@@ -1,0 +1,26 @@
+.footer-links {
+    color: rgba(255, 255, 255, 0.8); 
+    list-style: none; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; 
+    font-size: 12px; 
+    letter-spacing: 2px;
+}
+
+.link {
+    text-decoration: none;
+    color: white; 
+}
+
+.link:hover {
+    color: #5FB4A2;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-links {
+        flex-direction: row;
+        gap: 42px; 
+    }
+}

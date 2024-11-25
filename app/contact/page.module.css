@@ -1,0 +1,56 @@
+.page {
+    padding: 0 24px; 
+}
+
+.intro {
+    padding: 24px 0; 
+    border-top: 1px solid #EAEAEB; 
+    border-bottom: 1px solid #EAEAEB; 
+    display: grid; 
+    gap: 24px; 
+    grid-template-columns: 1fr;
+}
+
+.intro h1 {
+    font-size: 40px; 
+    line-height: 1.05; 
+}
+
+.intro p {
+    font-size: 15px; 
+    line-height: 2; 
+    margin-bottom: 24px; 
+}
+
+.form-container {
+    padding: 32px 0 80px; 
+}
+
+.form-container h2 {
+    font-size: 40px; 
+    line-height: 1.05; 
+    margin-bottom: 24px; 
+}
+
+@media screen and (min-width: 768px) {
+    .page {
+        padding: 0 40px; 
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .page {
+        padding: 0; 
+        max-width: 1110px; 
+        margin: 0 auto; 
+    }
+    .intro, .form-container {
+        display: grid; 
+        grid-template-columns: 1fr 635px;
+        padding: 48px 0; 
+    }
+    .intro p {
+        font-size: 16; 
+        line-height: 1.875; 
+    }
+}

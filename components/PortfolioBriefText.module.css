@@ -1,0 +1,44 @@
+.container {
+    padding: 24px 0; 
+    border-top: 1px solid #EAEAEB; 
+    border-bottom: 1px solid #EAEAEB; 
+    grid-area: text; 
+}
+
+.container h2 {
+    font-size: 40px; 
+
+}
+
+.container p {
+    margin: 24px 0; 
+    font-size: 15px; 
+    line-height: 2; 
+    color: #33323d; 
+}
+
+.container button {
+    padding: 17px 32px; 
+    font-size: 12px; 
+    letter-spacing: 2px;
+}
+
+@media screen and (min-width: 768px) {
+    .container h2 {
+        font-size: 40px; 
+        letter-spacing: -0.36px;
+    }
+    .container p {
+        font-size: 15px; 
+        margin: 29px 0 35px; 
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .container {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}

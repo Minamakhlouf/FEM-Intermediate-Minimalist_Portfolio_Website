@@ -1,0 +1,176 @@
+.page {
+    padding: 0 32px; 
+}
+
+.hero {
+    margin-bottom: 40px; 
+}
+
+.hero .image-container {
+    position: relative; 
+    width: 100%; 
+    aspect-ratio: 2.22;
+}
+
+.description {
+    display: grid; 
+    border-top: 1px solid #EAEAEB;
+    border-bottom: 1px solid #EAEAEB; 
+    padding: 24px 0; 
+    gap: 24px; 
+    margin-bottom: 48px; 
+}
+
+.description h2 {
+    font-size: 40px; 
+    line-height: 1.05; 
+}
+
+.description p, .background p {
+    font-size: 15px; 
+    line-height: 2; 
+    color: #33323d; 
+}
+
+.languages p {
+    font-size: 13px; 
+    color: #5fb4a2; 
+    font-weight: bold; 
+    line-height: 2; 
+}
+
+.background {
+    margin-bottom: 40px; 
+}
+
+.background h2, .image-preview h2 {
+    font-size: 32px; 
+    line-height: 1.31; 
+    margin-bottom: 28px; 
+}
+
+.image-preview {
+    margin-bottom: 65px; 
+}
+
+.image-preview h2 {
+    margin-bottom: 40px; 
+}
+
+.image-preview .image-container {
+    position: relative; 
+    width: 100%; 
+    aspect-ratio: 1.58;
+}
+
+.image-preview .image-container:first-of-type {
+    margin-bottom: 33px;
+}
+
+.other-projects {
+    display: flex;
+    border-top: 1px solid #EAEAEB; 
+    border-bottom: 1px solid #EAEAEB; 
+}
+
+.button {
+    text-decoration: none;
+    width: 100%; 
+    display: flex; 
+    flex-direction: column;
+    padding: 24px 0; 
+}
+
+.button:visited {
+    color: inherit;
+}
+
+.button h2 {
+    margin-top: 16px; 
+    font-size: 32px; 
+    line-height: 1.25;
+    color: #33323d; 
+}
+
+.button p {
+    font-size: 16px; 
+    line-height: 1.875; 
+    color: #33323d; 
+    opacity: .6; 
+}
+
+.button:last-of-type p{
+    text-align: end;
+}
+
+.button:first-of-type {
+    border-right: 1px solid #EAEAEB; 
+}
+
+.button:last-of-type {
+    align-items: end;
+}
+
+.arrow-right {
+    margin-left: auto; 
+    display: block; 
+}
+
+@media screen and (min-width: 768px) {
+    .page {
+        padding: 0 40px; 
+    }
+    .description {
+        display: grid; 
+        grid-template-areas: "heading description" "languages description" "button description";
+        grid-template-columns: 1fr 1fr;
+    }
+    .description h2 {
+        grid-area: heading; 
+    }
+    .description p {
+        grid-area: description; 
+        display: flex; 
+        align-items: center;
+        font-size: 15px; 
+    }
+    .description .languages {
+        grid-area: languages
+    }
+    .description-button {
+        grid-area: button; 
+    }
+    .background p {
+        font-size: 15px; 
+    }
+    .button {
+        padding: 32px 0; 
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .page {
+        padding: 0;
+        max-width: 1110px; 
+        margin: 0 auto; 
+    }
+    .grid-large {
+        display: grid; 
+        grid-template-columns: 350px 1fr;
+        gap: 125px; 
+    }
+    .description {
+        grid-template-columns: 1fr;
+        grid-template-areas: "heading" "description" "languages" "button";
+        align-self: flex-start;
+        padding: 40px 0; 
+    }
+    .languages {
+        display: flex;
+        flex-direction: column;
+        gap: 16px; 
+    }
+    .languages p {
+        font-size: 16px; 
+    }
+}

@@ -67,7 +67,7 @@ export default function Form(props) {
     }
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={styles.form} onSubmit={handleSubmit} noValidate>
             <div>
                 <label className={publicSans.className} htmlFor="name">Name</label>
                 <input 

@@ -47,6 +47,9 @@
 }
 
 @media screen and (min-width: 1110px) {
+    .contact {
+        padding: 0; 
+    }
     .contact-flex {
         max-width: 1110px; 
         display: grid; 

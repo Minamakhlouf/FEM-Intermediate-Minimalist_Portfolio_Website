@@ -12,9 +12,9 @@ export default function ContactCTA() {
     return (
         <section className={styles.contact}>
             <div className={styles["contact-flex"]}>
-            <h2>Interested in doing a project together?</h2>
-            <div></div>
-            <LinkButton href="/contact" text="Contact Me"/>
+              <h2>Interested in doing a project together?</h2>
+              <div></div>
+              <LinkButton href="/contact" text="Contact Me"/>
             </div>
       </section>
     )

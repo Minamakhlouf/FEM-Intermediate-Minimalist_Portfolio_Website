@@ -35,7 +35,7 @@ export default function Home() {
             />
           </picture>
           <div className={styles["hero-text"]}>
-            <h1 className={styles.heading}>Hey, I&apos;m Alex Spencer and I love building beautiful websites.</h1>
+            <h1 className={styles.heading}>Hey, I&apos;m Alex Spencer and I love building beautiful websites</h1>
             <a className={styles["about-link"]} href="#about"><span><Image src="/icons/down-arrows.svg" width="16" height="12" alt="down arrow"/></span><span className={publicSans.className}>ABOUT ME</span></a>
           </div>
         </div>

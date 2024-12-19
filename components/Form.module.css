@@ -50,7 +50,7 @@
 .form .submit:hover {
     color: #203A4C; 
     background-color: #Eaeaeb;
-    border: 1px solid #203A4C; 
+    outline: 1px solid #203A4C; 
 }
 
 @media screen and (min-width: 768px) {

@@ -10,9 +10,9 @@ const publicSans = Public_Sans({
 export default function FooterLinks() {
     return (
         <ul className={`${styles["footer-links"]} ${publicSans.className}`}>
-            <Link className={styles.link} href="/"><li>HOME</li></Link>
-            <Link className={styles.link} href="/portfolio"><li>PORTFOLIO</li></Link>
-            <Link className={styles.link} href="/contact"><li>CONTACT ME</li></Link>
+            <li><Link className={styles.link} href="/">HOME</Link></li>
+            <li><Link className={styles.link} href="/portfolio">PORTFOLIO</Link></li>
+            <li><Link className={styles.link} href="/contact">CONTACT ME</Link></li>
         </ul>
     )
 }

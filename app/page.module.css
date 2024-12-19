@@ -57,22 +57,26 @@
     margin-bottom: 32px; 
 }
 
-.about h2 {
+.about-text h2 {
     margin: 32px 0 28px; 
+    line-height: 1.05; 
     font-size: 40px; 
     font-weight: bold; 
     letter-spacing: -0.36px;
+    color: #33323d; 
 }
 
-.about p {
+.about-text p {
     font-size: 16px; 
     line-height: 1.8; 
     margin-bottom: 24px; 
+    color: #33323d; 
+    opacity: .8; 
 }
 
 @media screen and (min-width: 768px) {
     .hero-section {
-        padding: 47px 41px 0; 
+        padding: 0 41px; 
     }
     .content-container {
         position: relative; 
@@ -92,12 +96,17 @@
     .about {
         display: flex; 
         gap: 69px; 
+        justify-content: space-between;
     }
     .about .image-container {
-        width: 41%; 
+        aspect-ratio: 2.13;
+        max-width: 280px; 
+        margin-bottom: 0;
     }
     .about-text {
         width: 58%; 
+        max-width: 350px; 
+        margin: 0 auto; 
         border-top: 1px solid #EAEAEB; 
         border-bottom: 1px solid #EAEAEB; 
         padding: 48px 0; 
@@ -126,20 +135,24 @@
         font-size: 50px; 
         line-height: 1; 
         margin-top: unset; 
+        letter-spacing: -0.45px; 
+        width: 390px; 
+        padding: 0; 
     }
     .about {
-        display: grid; 
-        grid-template-columns: 3fr 2fr; 
         gap: 125px; 
         max-width: 1110px; 
         margin: 0 auto; 
         padding: 0; 
+        justify-content: unset;
     }
     .about .image-container {
-        width: 100%; 
-        height: 100%; 
+        aspect-ratio: .9;
+        max-width: 540px; 
     }
     .about-text {
         width: 100%; 
+        max-width: 350px; 
+        margin: 0; 
     }
 }

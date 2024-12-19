@@ -1,17 +1,17 @@
 .link {
     text-decoration: none;
-}
-
-.link button {
     text-transform: uppercase;
     padding: 17px 34px; 
     letter-spacing: 2px;
     border: 1px solid #33323d; 
     cursor: pointer; 
     transition: all .2s ease-in-out; 
+    color: #33323d; 
+    text-align: center;
+    display: inline-block; 
 }
 
-.link button:hover, .link button:focus {
+.link:hover, .link:focus {
     background-color: #203a4c;
     color: white; 
 }

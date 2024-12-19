@@ -45,7 +45,7 @@
 
 .link {
     text-decoration: none;
-    color: #33323d; 
+    color: white; 
 }
 
 .link:hover {
@@ -73,6 +73,9 @@
         padding: 0; 
         gap: 42px; 
         background-color: transparent;
+        color: #33323d
+    }
+    .link {
         color: #33323d
     }
 }

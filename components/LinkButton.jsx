@@ -10,7 +10,7 @@ const publicSans = Public_Sans({
 export default function LinkButton({href, text}) {
     return (
         <Link href={href} className={`${publicSans.className} ${styles.link}`}>
-            <button className={publicSans.className}>{text}</button>
+            {text}
         </Link>
     )
 }
